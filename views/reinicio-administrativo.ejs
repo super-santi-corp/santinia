@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<%- include('partials/head', { title: 'Contador del reinicio administrativo', stylesheet: 'reinicio-administrativo.css' }) %>
+	</head>
+	<body>
+		<%- include('partials/navbar') %>
+		<main>
+			<%- include('partials/hero', { title: 'Contador del reinicio administrativo', description: 'Consulta aquí cuánto falta para el próximo reinicio administrativo de Santinia, que se lleva a cabo cada 30 de noviembre.' }) %>
+			<section class="tiempo">
+				<h2>El próximo reinicio administrativo será dentro de:</h2>
+				<p class="contador">
+					...
+					<noscript>
+						<em>
+							Este navegador no tiene JavaScript activado; debes
+							cargar la página de nuevo para actualizar la cuenta
+							regresiva.
+						</em>
+						<%= noJsCountdown %>
+					</noscript>
+				</p>
+			</section>
+		</main>
+		<%- include('partials/footer') %>
+		<script>
+					function convertMilliseconds(ms) {
+						const second = 1000;
+						const minute = second * 60;
+						const hour = minute * 60;
+						const day = hour * 24;
+
+						const days = Math.floor(ms / day);
+						  ms %= day;
+
+						const hours = Math.floor(ms / hour);
+						  ms %= hour;
+
+						  const minutes = Math.floor(ms / minute);
+						  ms %= minute;
+
+						  const seconds = Math.floor(ms / second);
+
+						  const result = {};
+
+						  if (days >= 1) result.days = days;
+						  if (hours >= 1) result.hours = hours;
+						  if (minutes >= 1) result.minutes = minutes;
+						  if (seconds >= 1) result.seconds = seconds;
+
+						  return result;
+						}
+
+						function renderCountdown({ days, hours, minutes, seconds }) {
+							const element = document.querySelector('.contador');
+							const parts = [];
+
+							if (days) parts.push(`${days} ${days === 1 ? 'día': 'días'}`);
+							if (hours) parts.push(`${hours} ${hours === 1 ? 'hora': 'horas'}`);
+							if (minutes) parts.push(`${minutes} ${minutes === 1 ? 'minuto': 'minutos'}`);
+							if (seconds) parts.push(`${seconds} ${seconds === 1 ? 'segundo': 'segundos'}`);
+
+							element.innerText = parts.join(', ');
+						}
+
+			const difference = <%= difference %>;
+			// Calculate the absolute target time once when the page loads
+			const targetTime = Date.now() + difference;
+
+			// Render immediately so there's no 1-second delay on load
+			renderCountdown(convertMilliseconds(difference));
+
+			setInterval(() => {
+			    // Subtract the current time from the target time to get the exact remaining ms
+			    const newDifference = targetTime - Date.now();
+
+			    if (newDifference >= 0) {
+			        renderCountdown(convertMilliseconds(newDifference));
+			    } else {
+					location.reload(true);
+			    }
+			}, 1000);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "santinia",
+  "version": "1.0.0",
+  "description": "Sitio Web oficial del gobierno de la Unión Santiniana",
+  "main": "index.js",
+  "repository": "https://github.com/super-santi-corp/santinia.git",
+  "author": "Santiago Rojas <95766532+santi100a@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "compression": "^1.7.4",
+    "ejs": "^7.0.2",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7"
+  },
+  "scripts": {
+    "start": "node ."
+  }
+}

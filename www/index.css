@@ -1,0 +1,117 @@
+body {
+	font-family: system-ui;
+	margin: 0;
+	background: #f4f6f8;
+	color: #222;
+}
+
+.paragraph {
+	text-align: justify;
+}
+
+header {
+	background: #660000;
+	color: #fff;
+	padding: 1.5rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header img {
+	height: 60px;
+}
+nav a {
+	color: #fff;
+	text-decoration: none;
+	margin-left: 2rem;
+	font-weight: bold;
+}
+nav a:hover {
+	text-decoration: underline;
+}
+.hero {
+	background: #e5ecf6;
+	padding: 3rem 2rem;
+	text-align: center;
+}
+.hero h1 {
+	margin-top: 0;
+	font-size: 2.5rem;
+}
+.hero p {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+}
+.btn {
+	background: #660000;
+	color: #fff;
+	padding: 0.8rem 2rem;
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+	text-decoration: none;
+}
+.secciones {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 2rem 0;
+}
+.card {
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+	margin: 1rem;
+	padding: 2rem;
+	width: 300px;
+	text-align: center;
+
+	/* Add these properties */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+/* Optional: Add a helper class or target text inside cards to ensure spacing */
+.card p {
+	margin-bottom: 1.5rem;
+}
+.card h2 {
+	margin-top: 0;
+}
+footer {
+	background: #0a6600;
+	color: #fff;
+	text-align: center;
+	padding: 1rem 0;
+	margin-top: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #222;
+		color: #f4f6f8;
+	}
+	.card {
+		background: #000000;
+		border-radius: 8px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+		margin: 1rem;
+		padding: 2rem;
+		width: 300px;
+		text-align: center;
+
+		/* Ensure dark mode cards have the same flex properties */
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		box-sizing: border-box;
+	}
+	.hero {
+		background: #1a1309;
+		padding: 3rem 2rem;
+		text-align: center;
+	}
+}

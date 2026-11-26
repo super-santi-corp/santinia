@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<%- include('partials/head') %>
+	</head>
+	<body>
+		<%- include('partials/navbar') %>
+		<main>
+			<%- include('partials/hero', { title: 'Bienvenidos al portal oficial del Gobierno Federal de la Unión Santiniana', description: 'Aquí puedes encontrar enlaces a nuestros servicios, información de contacto y documentación sobre la Unión Santiniana.' }) %>
+
+			<section class="secciones">
+				<%- include('partials/card', { title: '¿Qué es Santinia?', description: 'Somos una micronación socialista fundada en 2015, dirigida por el Partido Comunista de Santinia.', linkButtons: [{ url: 'https://docs.google.com/document/d/e/2PACX-1vSvS0x_ZR8hOMCpTARRvKOy2-wrUdvPmG7MyJjqMjJlE-lbgtVuev2cyebrvY5uNw/pub', text: 'Historia Nacional' }, { url: 'https://docs.google.com/document/d/e/2PACX-1vQdmyJb4PzLVEAHxo0eYy4wOSGYzUzjv9XdJyt0eoC3JvfNtp3uKvgsP0W3E4SWOw/pub', text: 'Nuestra Constitución' }] }) %>
+
+				<%- include('partials/card', { title: 'Trámites y servicios', description: 'Accede a los principales trámites y servicios en línea de manera rápida y sencilla.', linkButtons: [{ url: 'servicios', text: 'Ver más' }] }) %>
+				<div class="card">
+					<h2><em>La Lucha</em></h2>
+					<p>
+						Infórmate sobre las últimas noticias, comunicados y eventos del país
+						en el periódico <em>La Lucha</em>.
+					</p>
+					<a href="https://santi100a.github.io" class="btn">Leer noticias</a>
+				</div>
+			</section>
+		</main>
+			<%- include('partials/footer') %>
+	</body>
+</html>

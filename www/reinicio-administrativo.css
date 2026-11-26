@@ -1,0 +1,10 @@
+@import url(index.css);
+
+.tiempo {
+    text-align: center;
+    .contador {
+        font-weight: lighter;
+        letter-spacing: 5px;
+        font-size: xx-large;
+    }
+}

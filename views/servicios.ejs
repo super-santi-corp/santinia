@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<%- include('partials/head', { title: 'Servicios gubernamentales' }) %>
+	</head>
+	<body>
+		<%- include('partials/navbar') %>
+		<main>
+			<%- include('partials/hero', { title: 'Servicios gubernamentales', description: 'Aquí encontrarás nuestros servicios en línea.' }) %>
+			<section class="secciones">
+				<%- include('partials/card', { title: 'Banco de Santinia', description: 'Consulta transacciones, realiza pagos y verifica tu saldo.', linkButtons: [{ url: 'https://banco-de-santinia.onrender.com/', text: 'Acceder' }] }) %>
+				<%- include('partials/card', { title: 'Contador del reinicio administrativo', description: 'Consulta cuánto tiempo falta para el próximo reinicio administrativo del Estado.', linkButtons: [{ url: '/reinicio-administrativo', text: 'Consultar' }] }) %>
+			</section>
+		</main>
+			<%- include('partials/footer') %>
+	</body>
+</html>

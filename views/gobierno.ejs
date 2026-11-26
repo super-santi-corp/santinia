@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<%- include('partials/head', { title: 'Sobre el gobierno de Santinia' }) %>
+	</head>
+	<body>
+		<%- include('partials/navbar') %>
+		<main>
+			<%- include('partials/hero', { title: 'Sobre el gobierno de Santinia', description: 'Aquí encontrarás información acerca del Estado y de nuestro país, la Unión Santiniana.' }) %>
+            <p class="paragraph">
+                Santinia es una micronación socialista que comenzó en 2015 como la República de Santirigoria y pasó por una época imperial entre 2019 y 2024, año en el cual iniciaron las reformas socialistas que llevaron al actual sistema.
+            </p>
+		<section class="secciones">
+            <%- include('partials/card', { title: 'Los fundamentos de Santinia', description: 'Lee nuestra historia nacional y nuestra constitución.', linkButtons: [{ url: 'https://docs.google.com/document/d/e/2PACX-1vSvS0x_ZR8hOMCpTARRvKOy2-wrUdvPmG7MyJjqMjJlE-lbgtVuev2cyebrvY5uNw/pub', text: 'Historia Nacional' }, { url: 'https://docs.google.com/document/d/e/2PACX-1vQdmyJb4PzLVEAHxo0eYy4wOSGYzUzjv9XdJyt0eoC3JvfNtp3uKvgsP0W3E4SWOw/pub', text: 'Nuestra Constitución' }] }) %>
+			<%- include('partials/card', { title: 'Legislación federal', description: 'Accede al marco legal federal de Santinia.', linkButtons: [{ url: 'https://drive.google.com/drive/folders/1UGr_XkE-qv6fKvNtsT_IKIFzRXfowOUz', text: 'Leyes federales vigentes' }, { url: 'https://drive.google.com/drive/folders/1PFYRQd6kbZ1WazNPcj3GaB4PVLXWblZU', text: 'Leyes federales derogadas' }] }) %>
+            <%- include('partials/card', { title: 'Códigos legales', description: 'Las leyes federales que fundamentan las ramas del derecho santiniano.', linkButtons: [{ text: 'Código Penal', url: 'https://docs.google.com/document/d/e/2PACX-1vQp_sPeWPkuaZ5hFOyAVGqnPxX_tjxWn0VSB6-xqocLgRZHvNvpO8mDjozub7mJew/pub' }, { text: 'Código Civil', url: 'https://docs.google.com/document/d/e/2PACX-1vS1GdscXKgZd3zYtCRbHRm7Muezzpt48peFr8WnwftJywdtCN3Edg8umomgxMc2mA/pub' }, { text: 'Código Administrativo', url: 'https://docs.google.com/document/d/e/2PACX-1vTRlZfaNzvJRsgWsKFiuQ-QRdFOdGuT_J2l438rGlD3Al2jEyaRE9ZmpfYMOPyynQ/pub' }] }) %>
+			<%- include('partials/card', { title: 'Documentos adicionales', description: 'Encuentra otros documentos legales de Santinia.', linkButtons: [{ text: 'Decretos presidenciales', url: 'https://drive.google.com/drive/folders/1GZwkUIAvLUswO2XAgkjO55e32PNKQ0UW' }, { text: 'Resoluciones ministeriales', url: 'https://drive.google.com/drive/folders/1beWKuUDtFmZSbqBohTx5jWAL3arezaMd' }, { text: 'Comunicados externos del Partido Comunista', url: 'https://drive.google.com/drive/folders/1sLcv4u1xWJzUbjYBz6A9x17DfjMCSQfl' }, { text: 'Sentencias judiciales', url: 'https://drive.google.com/drive/folders/1y_0Z_mgS-r7GS4NrCZpfiPnxRpMd2mMQ?usp=sharing' }] }) %>
+		</section>
+    </main>
+			<%- include('partials/footer') %>
+
+	</body>
+    </html>

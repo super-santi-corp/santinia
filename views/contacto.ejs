@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<%- include('partials/head', { title: 'Contáctanos' }) %>
+	</head>
+	<body>
+		<%- include('partials/navbar') %>
+		<main>
+			<%- include('partials/hero', { title: 'Contáctanos', description: 'Aquí encontrarás nuestros medios de comunicación para las diversas dependencias del Estado.' }) %>
+			<section class="secciones">
+				<%- include('partials/card', { title: '¿Prefieres una conversación?', description: 'No te preocupes. Estamos aquí para asistirte. Todos nuestros servicios comparten los siguientes números telefónicos.', linkButtons: [{ url: 'tel:573163121863', text: 'Número telefónico principal (con MI)' }, { url: 'tel:573227145166', text: 'Número telefónico secundario (sólo llamadas de voz)' }] }) %>
+			<%- include('partials/card', { title: 'Partido Comunista de Santinia', description: 'El primer y único partido político de la Unión Santiniana, fundado sobre los principios del socialismo autogestionario y la moral cristiana.', linkButtons: [{ url: 'mailto:supersanti.corp+pcs@gmail.com', text: 'Correo electrónico' }] }) %>
+			<%- include('partials/card', { title: 'Presidencia de la Nación', description: 'El máximo cargo dentro del PCS y el Estado.', linkButtons: [{ url: 'mailto:supersanti.corp+presidencia@gmail.com', text: 'Correo electrónico' }] }) %>
+			<%- include('partials/card', { title: 'Comité Central', description: 'El máximo órgano de poder dentro del PCS y el Estado.', linkButtons: [{ url: 'mailto:supersanti.corp+ccentral@gmail.com', text: 'Correo electrónico' }] }) %>
+		</section>
+	</main>
+		<%- include('partials/footer') %>
+	</body>
+</html>

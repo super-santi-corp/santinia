@@ -1,0 +1,8 @@
+<div class="card">
+    <h2><%= title %></h2>
+    <p><%= description %></p>
+    <% for (const { url, text } of typeof linkButtons === 'undefined' ? [] : linkButtons) { %>
+        <br />
+        <a href="<%= url %>" class="btn"><%= text %></a>
+    <% } %>
+</div>
